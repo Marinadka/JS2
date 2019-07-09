@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eShop</title>
+  <script src="https://kit.fontawesome.com/2c809273fa.js"></script>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="cart-button" type="button"><i class="fas fa-shopping-basket"></i></button>
+  </header>
+  <main>
+    <div class="goods-list"></div>
+  </main>
+  <script>
+	const goods = [
+  { title: 'Shirt', price: 150 },
+  { title: 'Socks', price: 50 },
+  { title: 'Jacket', price: 350 },
+  { title: 'Shoes', price: 250 },
+  { title: 'Trausers', price: 70 },
+  { title: 'Dress', price: 200 },
+  { title: 'Accessories', price: 100 },
+];
+
+const renderGoodsItem = (title, price) => {
+  return `<div class="goods-item"><h3>${title}</h3><p>${price}</p></div>`;
+};
+
+const renderGoodsList = (list) => {
+  let goodsList = list.map(item => renderGoodsItem(item.title, item.price)); //.map порождает запятые, но хз как убрать. Попробовала нсколько варантов, не выгорело. Так как передается объект блоков, то эти запятые разделяют части объекта. И оказываются в HTML.
+  document.querySelector('.goods-list').innerHTML = goodsList;
+}
+
+renderGoodsList(goods);
+</script>
+<script>
+//	let test2 = [{a: 1, b: 2}, {c: '1', d: '2', e: [3, 4]}];
+	
+	let test2 = [
+		{
+			a: 1,
+			b: 2
+		},
+		{
+			c: '1',
+			d: '2',
+			e: [3, 4]
+		}
+	]
+
+	let [first, second] = test2; // {a: 1, b: 2} , {c: '1', d: '2', e: [3, 4]}
+	
+	let {a, b} = first;
+	let {c,d,e} = second;
+	
+	console.log(a); // 1
+	console.log(b); // 2
+	console.log(c); // 1
+	console.log(d); // 2 
+	console.log(e); // [3, 4]
+</script>
+</body>
+</html>

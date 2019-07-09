@@ -1,0 +1,60 @@
+
+@font-face {
+ font-family: "Open Sans";
+ src: url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
+}
+
+@font-face {
+	font-family: "Roboto Mono";
+	src: url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+}
+
+* {
+	margin: 0 auto;
+}
+
+header {
+	padding: 30px 50px;
+	height: 50px;
+	background-color: lightseagreen;
+	text-align: right;
+}
+
+.cart-button {
+	color: #333333;
+	background-color: transparent;
+	padding: 5px 10px;
+	font-family: 'Roboto Mono', monospace;
+	margin: 20px;
+	font-size: 34px;
+	border: none;
+	cursor: pointer;
+}
+
+.goods-list {
+	width: 800px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 30px 50px;
+	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+	margin-top: 50px;
+}
+
+.goods-list h3 {
+	font-size: 30px;
+}
+
+.goods-list p {
+	font-size: 20px;
+	width: 150px;
+	background-color: blanchedalmond;
+}
+
+.goods-item {
+	margin: 40px;
+	background-color: whitesmoke;
+	height: 130px;
+	width: 200px;
+}
