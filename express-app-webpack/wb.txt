@@ -1,0 +1,1 @@
+npm i html-loader html-webpack-plugin css-loader file-loader style-loader mini-css-extract-plugin uglifyjs-webpack-plugin optimize-css-assets-webpack-plugin copy-webpack-plugin @babel/core @babel/preset-env babel-loader url-loader -D
